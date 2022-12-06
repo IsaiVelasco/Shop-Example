@@ -77,7 +77,10 @@ function executeUpdate(){
 }
 
 function showData(id){
-   alert(id);
+   producto = _controller.findAllById(id);
+   document.getElementById('codigo').value = producto.id;
+   document.getElementById('descripcion').value = producto.descripcion;
+   document.getElementById('precio').value = producto.precio;
 }
 
 function executeDelete(id){
