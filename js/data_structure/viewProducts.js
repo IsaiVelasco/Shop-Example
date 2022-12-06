@@ -52,7 +52,7 @@ function updateIndexTable(){
          $${producto.precio}
       </td>
       <td class="flex items-center py-4 px-6 space-x-3">
-         <a href="#"
+         <a href="#" onclick="showData(${producto.id})"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
          <a href="#" onclick="executeDelete(${producto.id})"
             class="font-medium text-red-600 dark:text-red-500 hover:underline">Remove</a>
@@ -84,7 +84,7 @@ function showData(id){
 }
 
 function executeDelete(id){
-   alert(id)
+   
    _controller.deleteById(id);
    updateIndexTable();
 }
