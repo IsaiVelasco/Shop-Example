@@ -84,9 +84,11 @@ function showData(id){
 }
 
 function executeDelete(id){
-   
-   _controller.deleteById(id);
-   updateIndexTable();
+   var decision = confirm('¿Seguro que deseas eliminar?');
+   if(decision == true){
+      _controller.deleteById(id);
+      updateIndexTable();
+   }
 }
 
 
