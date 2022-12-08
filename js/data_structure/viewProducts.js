@@ -72,8 +72,12 @@ function executeCreate(){
 
 function executeUpdate(){
    updateInputForProduct();
-   _controller.update(id, descripcion, precio)
-   updateIndexTable();
+   if(id = 0){
+      alert('Debe ingresar un código de articulo distinto a cero');
+   }else{
+      _controller.update(id, descripcion, precio)
+      updateIndexTable();
+   }
 }
 
 function showData(id){
@@ -101,5 +105,4 @@ function updateInputForProduct(){
    descripcion = document.getElementById('descripcion').value;
    precio = document.getElementById('precio').value;
 }
-
 
